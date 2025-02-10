@@ -1,31 +1,5 @@
 #include "../include/ffmpeg_exec.h"
 
-// int duplicate_frames(const char *video_path, float framerate)
-// {
-//     char output_file[512];
-//     // Crée le nom de fichier de sortie en remplaçant l'extension par ".mjpeg"
-//     strncpy(output_file, video_path, sizeof(output_file));
-//     output_file[sizeof(output_file) - 1] = '\0';
-
-//     char *dot = strrchr(output_file, '.');
-//     if (dot) {
-//         strcpy(dot, ".mjpeg");
-//     } else {
-//         strcat(output_file, ".mjpeg");
-//     }
-
-//     char command[1024];
-//     snprintf(command, sizeof(command),
-//              "ffmpeg -y -i \"%s\" -vf \"fps=%f\" -s 256x256 -c:v mjpeg -q:v 5 \"%s\"",
-//              video_path, framerate, output_file);
-
-//     printf("Exécution de la commande : %s\n", command);
-
-//     // Exécution bloquante de la commande ffmpeg
-//     int status = system(command);
-//     return (status == 0) ? 0 : 1;
-// }
-
 int duplicate_frames(const char * video_path, float framerate)
 {
     char fps[32];
