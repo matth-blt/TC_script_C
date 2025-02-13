@@ -41,7 +41,7 @@ int duplicate_frames(const char * video_path)
     char output_path[] = "./output/%08d.jpg";
 
     char ffmpeg_command[512];
-    sprintf(ffmpeg_command, "ffmpeg -i %s -vf %s -s 256x256 -sws_flags spline+accurate_rnd+full_chroma_int -color_trc 2 -colorspace 2 -color_primaries 2 -map 0:v -c:v mjpeg -pix_fmt yuvj420p -q:v 1 -start_number 0 %s", video_path, fps, output_path);
+    sprintf(ffmpeg_command, "ffmpeg -i \"%s\" -vf %s -s 256x256 -sws_flags spline+accurate_rnd+full_chroma_int -color_trc 2 -colorspace 2 -color_primaries 2 -map 0:v -c:v mjpeg -pix_fmt yuvj420p -q:v 1 -start_number 0 \"%s\"", video_path, fps, output_path);
     
     system(ffmpeg_command);
 
