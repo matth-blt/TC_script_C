@@ -1,4 +1,4 @@
-# Video Frame Duplication Script
+# TC SCRIPT C
 
 This project contains a C script that uses `ffmpeg` and `ffprobe` to duplicate video frames, effectively doubling the framerate of a video.
 
@@ -11,7 +11,7 @@ This project contains a C script that uses `ffmpeg` and `ffprobe` to duplicate v
 
 1. Clone this repository:
     ```sh
-    git clone [https://github.com/your-username/your-repo.git](https://github.com/matth-blt/TC_script_C.git)
+    git clone https://github.com/matth-blt/TC_script_C.git
     cd TC_script_C
     ```
 
