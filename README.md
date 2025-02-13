@@ -30,5 +30,5 @@ This project contains a C script that uses `ffmpeg` and `ffprobe` to duplicate v
 To use the script, run the following command:
 
 ```sh
-./bop --path /path/to/your/video
+./bop.exe --path /path/to/your/video
 
