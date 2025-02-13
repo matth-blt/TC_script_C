@@ -1,4 +1,4 @@
-# TC SCRIPT C
+# TransitionChooser script in C
 
 This project contains a C script that uses `ffmpeg` and `ffprobe` to duplicate video frames, effectively doubling the framerate of a video.
 
