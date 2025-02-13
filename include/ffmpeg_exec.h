@@ -7,24 +7,40 @@
 #include <unistd.h>
 #include <math.h>
 
-/**
- * @brief Construit et exécute la commande ffmpeg pour dupliquer (interpoler) les frames de la vidéo.
- *
- * La commande ffmpeg devra être configurée pour doubler le nombre de frames (par exemple en utilisant un filtre tel que minterpolate).
- *
- * @param video_path Chemin vers le fichier vidéo d'entrée.
- * @return int 0 si l'exécution s'est déroulée correctement, sinon une valeur différente.
- */
-int duplicate_frames(const char * video_path, float framerate);
+typedef struct {
+    int numerateur;
+    int denominateur;
+} Fraction;
 
 /**
- * @brief Check le framerate de la vidéo et le recupère.
+ * @brief Check the framerate of the video and retrieve it.
  *
- * La commande ffprobe devra être configurée pour récupérer le framerate de la video
+ * The ffprobe command should be configured to retrieve the framerate of the video.
  *
- * @param video_path Chemin vers le fichier vidéo d'entrée.
- * @return float de la valeur du framerate de la vidéo.
- */
-float get_framerate(const char * video_path);
+ * @param video_path Path to the input video file.
+ * @return Fraction representing the framerate of the video.
+*/
+Fraction get_framerate(const char * video_path);
+
+/**
+ * @brief Multiplies the framerate fraction by two.
+ *
+ * This function takes a fraction representing a framerate and multiplies its numerator by two,
+ * effectively doubling the framerate while keeping the denominator unchanged.
+ *
+ * @param frac The fraction representing the original framerate.
+ * @return Fraction representing the doubled framerate.
+*/
+Fraction multiplicateur_framerate(Fraction frac);
+
+/**
+ * @brief Constructs and executes the ffmpeg command to duplicate (interpolate) the frames of the video.
+ *
+ * The ffmpeg command should be configured to double the number of frames (for example, using a filter such as minterpolate).
+ *
+ * @param video_path Path to the input video file.
+ * @return int 0 if the execution was successful, otherwise a different value.
+*/
+int duplicate_frames(const char * video_path);
 
 #endif

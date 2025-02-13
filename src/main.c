@@ -2,12 +2,12 @@
 #include "../include/ffmpeg_exec.h"
 
 /**
- * @brief Point d'entrée du programme.
+ * @brief Entry point of the program.
  *
- * @param argc Nombre d'arguments.
- * @param argv Tableau des arguments.
- * @return int Code de retour du programme.
- */
+ * @param argc Number of arguments.
+ * @param argv Array of arguments.
+ * @return int Return code of the program.
+*/
 int main(int argc, char *argv[])
 {
     char * video_path = get_video_path(argc, argv);
@@ -37,9 +37,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    float framerate = get_framerate(video_path);
-
-    //duplicate_frames(video_path, framerate);
+    duplicate_frames(video_path);
 
     free(video_path);
     return EXIT_SUCCESS;

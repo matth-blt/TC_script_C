@@ -2,14 +2,12 @@
 
 char * get_video_path(int argc, char *argv[])
 {
-    // printf("test : %s | %s\n", argv[1], argv[2]);
-
     int taille = 0;
     char * path = NULL;
 
     if (strcmp(argv[1], "--path") == 0) {
         if (argc == 3) {
-            taille = strlen(argv[2] + 1);
+            taille = strlen(argv[2]) + 1;
             path = malloc(sizeof(char) * taille);
             strcpy(path, argv[2]);
         }

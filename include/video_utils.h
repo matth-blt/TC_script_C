@@ -8,30 +8,31 @@
 #include <math.h>
 
 /**
- * @brief Récupère le chemin de la vidéo à partir des arguments du programme.
+ * @brief Retrieves the video path from the program arguments.
  *
- * Cette fonction extrait le chemin du fichier vidéo passé en argument lors du lancement.
+ * This function extracts the video file path passed as an argument during the program launch.
  *
- * @param argc Nombre d'arguments.
- * @param argv Tableau des arguments.
- * @return char* Chaîne contenant le chemin de la vidéo (allouée dynamiquement, à libérer par l'appelant)
- *         ou NULL en cas d'erreur ou d'argument manquant.
- */
+ * @param argc Number of arguments.
+ * @param argv Array of arguments.
+ * @return char* String containing the video path (dynamically allocated, must be freed by the caller)
+ *         or NULL in case of error or missing argument.
+*/
 char * get_video_path(int argc, char *argv[]);
 
 /**
- * @brief Vérifie si le fichier vidéo existe et est accessible.
+ * @brief Checks if the video file exists and is accessible.
  *
- * @param video_path Chemin vers le fichier vidéo.
- * @return int 0 si le fichier est accessible, sinon une valeur différente (ex : 1).
- */
+ * @param video_path Path to the video file.
+ * @return int 0 if the file is accessible, otherwise a different value (e.g., 1).
+*/
 int check_video_file(const char * video_path);
 
 /**
- * @brief Affiche l'utilisation correcte du programme.
+ * @brief Displays the correct usage of the program.
  *
- * @param program_name Nom du programme (argv[0]).
- */
+ * @param program_name Name of the program (argv[0]).
+*/
 void print_usage(const char * program_name);
+
 
 #endif
