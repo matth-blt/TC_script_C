@@ -4,7 +4,7 @@ This project contains a C script that uses `ffmpeg` and `ffprobe` to duplicate v
 
 ## Prerequisites
 
-- `gcc` to compile the C code
+- `gcc` and `make` to compile the C code
 - `ffmpeg` and `ffprobe` to process the videos
 
 ## Installation
